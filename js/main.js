@@ -10,7 +10,7 @@ $(".bg-cover").imagesLoaded({
         autoAlpha: 1
     })
 }),
-$(window).on(function() {
+$(window).on('load', function () {
     function e() {
         o.countdown("resume")
     }

@@ -18,10 +18,7 @@ $(window).on("load", function() {
     n.countdown("2017/09/01", function(e) {
         $(this).html(e.strftime("%D Days %H:%M:%S"))
     }),
-    $(".btn-count").hover(function() {
-        n.countdown("pause"),
-        $(".st-countdown").html("Bid on Flippa")
-    }, function() {
+ function() {
         n.countdown("resume")
     });
     var o, a, t = $(".main-content p"), s = $(".main-content h3"), r = $(".main-content ul"), i = "20px", c = new TimelineMax({

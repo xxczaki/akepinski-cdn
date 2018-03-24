@@ -13,7 +13,24 @@ $(".bg-cover").imagesLoaded({
 $(window).on("load", function() {
     var e = "#EC008C";
     $("#minimos-4").length && (e = "#F8EB31"),
+    $(".btn-count").hover(function() {
+        n.countdown("pause")
+    }, function() {
+        n.countdown("resume")
+    });
+    var o, a, t = $(".main-content p"), s = $(".main-content h3"), r = $(".main-content ul"), i = "20px", c = new TimelineMax({
+        paused: !0,
+        delay: .05,
+        onComplete: function() {
+            r.length && TweenMax.to(r, .75, {
+                autoAlpha: 1,
+                ease: Linear.easeNone
+            })
+        },
+        onCompleteParams: []
+    });
     isFirefox ? i = "0px" : mobileVar && (i = "2px"),
+    n.countdown("pause"),
     s.length && (a = new SplitText(s,{
         type: "words,chars",
         wordsClass: "gpu-hack sven-word-++",
@@ -28,6 +45,9 @@ $(window).on("load", function() {
         ease: Bounce.easeOut
     }, .08),
     c.addLabel("end"),
+    c.call(function() {
+        n.countdown("resume")
+    }, [])),
     t.length && (o = new SplitText(t,{
         type: "words,chars",
         wordsClass: "gpu-hack s-word sven-word-++",
@@ -61,4 +81,3 @@ $(window).on("load", function() {
     }),
     c.play()
 });
-  

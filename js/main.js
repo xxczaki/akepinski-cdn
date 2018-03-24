@@ -13,14 +13,9 @@ $(".bg-cover").imagesLoaded({
 $(window).on("load", function() {
     var e = "#EC008C";
     $("#minimos-4").length && (e = "#F8EB31"),
-    $("#drifter").length ? initDrifter("drifter", e) : $("#particles-js").length && initStompParticles();
-    var n = $(".st-countdown");
-    n.countdown("2017/09/01", function(e) {
-        $(this).html(e.strftime("%D Days %H:%M:%S"))
-    }),
- function() {
+   function() {
         n.countdown("resume")
-    });
+    };
     var o, a, t = $(".main-content p"), s = $(".main-content h3"), r = $(".main-content ul"), i = "20px", c = new TimelineMax({
         paused: !0,
         delay: .05,

@@ -11,10 +11,9 @@ $(".bg-cover").imagesLoaded({
     })
 }),
 $(window).on("load", function() {
-    var e = "#EC008C";
-    $("#minimos-4").length && (e = "#F8EB31"),
+    var n = $(".st-countdown");
     $(".btn-count").hover(function() {
-        n.countdown("pause")
+        $(".st-countdown").html()
     }, function() {
         n.countdown("resume")
     });
